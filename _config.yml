@@ -26,10 +26,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
+  - jekyll-assets
+
+assets:
+  compression: true
+  assets:
+    - "*.png"
+    - "_scss/styles.scss"
+  digest: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
