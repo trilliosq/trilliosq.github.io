@@ -55,25 +55,29 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
+                $('#contactForm :input').attr('disabled', 'disabled');
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
                     url:"https://formsubmit.co/shivaji.mailbox@gmail.com",
                     success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor','default');
-                            $('#success').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#success').modal('show');
-                        })
+                            $('.alert-success').removeClass("d-none");
+                            setTimeout(function(){
+                                $('.alert-success').fadeOut("slow");
+                                $('#contactForm :input').val('');
+                                $('#contactForm :input').removeAttr('disabled', '');
+                            }, 2000);
+                        });
                     },
                     error: function() {
+
                         $('#contactForm').fadeTo( "slow", 1, function() {
-                            $('#error').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#error').modal('show');
+                            $('.alert-danger').removeClass("d-none").show();
+                            setTimeout(function(){
+                                $('.alert-danger').fadeOut("slow");
+                                $('#contactForm :input').removeAttr('disabled', '');
+                            }, 2000);
                         })
                     }
                 })

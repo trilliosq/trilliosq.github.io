@@ -3830,6 +3830,7 @@ h3 {
 /*=================== contact form start ====================*/
 /* line 45, ../../Arafath/CL/December/233. Startup/HTML/scss/_contact.scss */
 .contact-title {
+  padding-top: 146px;
   font-size: 27px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -6924,3 +6925,27 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.contact-floating {
+  position: fixed;
+  top: auto;
+  left: auto;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1;
+  background: #e24329;
+  border-radius: .3125rem;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.4);
+  .fa {
+    font-size: 30px;
+    color: white;
+    margin: auto;
+    padding: 15px;
+  }
+}
+
+#contactForm {
+  .form-control[disabled]{
+    background: #e5e6e9 !important;
+  }
+}
