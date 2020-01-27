@@ -11,8 +11,6 @@ button_url="/service.html"
 <!--/ Banner  -->
 
 
-
-
 <!-- Services  -->
 {% include services.html
 description="With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
@@ -31,7 +29,6 @@ third_card_description="Custom development services including Visualforce, Apex,
 <!--/ Services  -->
 
 
-
 <!-- About  -->
 {% capture about_us_main_content %}
 <p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><b>{{site.title}}</b> is a seasoned
@@ -43,81 +40,31 @@ third_card_description="Custom development services including Visualforce, Apex,
 {% endcapture %}
 
 {% include about-us.html
-
 description="Microsoft Dynamic CRM Consulting & Custom Development"
 main_content=about_us_main_content
-
 %}
 <!--/ About  -->
 
 
-<!-- Our Latest Blogs  -->
 {% include our-latest-blogs.html %}
-<!-- Our Latest Blogs  -->
 
 
 <!-- testimonial_area  -->
-<div class="testimonial_area ">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="testmonial_active owl-carousel">
-                    <div class="single_carousel">
-                        <div class="single_testmonial text-center">
-                            <div class="quote">
-                                <img src="assets/img/testmonial/quote.svg" alt="">
-                            </div>
-                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
-                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                            <div class="testmonial_author">
-                                <div class="thumb">
-                                    <img src="assets/img/testmonial/thumb.png" alt="">
-                                </div>
-                                <h3>Robert Thomson</h3>
-                                <span>Business Owner</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_carousel">
-                        <div class="single_testmonial text-center">
-                            <div class="quote">
-                                <img src="assets/img/testmonial/quote.svg" alt="">
-                            </div>
-                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
-                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                            <div class="testmonial_author">
-                                <div class="thumb">
-                                    <img src="assets/img/testmonial/thumb.png" alt="">
-                                </div>
-                                <h3>Robert Thomson</h3>
-                                <span>Business Owner</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single_carousel">
-                        <div class="single_testmonial text-center">
-                            <div class="quote">
-                                <img src="assets/img/testmonial/quote.svg" alt="">
-                            </div>
-                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
-                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                            <div class="testmonial_author">
-                                <div class="thumb">
-                                    <img src="assets/img/testmonial/thumb.png" alt="">
-                                </div>
-                                <h3>Robert Thomson</h3>
-                                <span>Business Owner</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% capture testimonials %}
+{% include testimonial.html
+    description="With trillios q, better pipeline visibility and team efficiencies have<br> helped double our business within six months."
+    author="VIVEK VISWANATHAN"
+    author_role="CEO, SND SOLUTIONS"
+%}
+{% include testimonial.html
+description="Some other testimonial."
+author="SOME PERSON"
+author_role="CEO, XYZ SOLUTIONS"
+%}
+{% endcapture %}
+
+
+{% include testimonial-area.html testimonials=testimonials %}
 <!-- /testimonial_area  -->
 
 {% include get-in-touch.html %}
