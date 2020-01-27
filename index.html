@@ -4,19 +4,18 @@ layout: default
 
 <!-- Banner  -->
 {% include banner.html
-
 title="Dynamics CRM Consulting Company"
 button_label="View Our Services"
 button_url="/service.html"
-
 %}
 <!--/ Banner  -->
 
+
+
+
 <!-- Services  -->
 {% include services.html
-
 description="With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
-
 first_card_image="assets/img/svg_icon/1.svg"
 first_card_title="Implementation"
 first_card_description="Setup, Configuration, Customization and Training for new and existing Microsoft Dynamics CRM instances."
@@ -28,108 +27,33 @@ second_card_description="Integrate Dynamics CRM with ERP, Accounting, Databases,
 third_card_image="assets/img/svg_icon/3.svg"
 third_card_title="Development"
 third_card_description="Custom development services including Visualforce, Apex, Lightning Components, Web Apps, Services and Mobile Apps."
-
 %}
 <!--/ Services  -->
 
+
+
 <!-- About  -->
+{% capture about_us_main_content %}
+<p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><b>{{site.title}}</b> is a seasoned
+    Microsoft Dynamic CRM consulting and custom development company. If you’re looking for a trusted advisor to help you
+    get more out of your team and your company, let <b>{{site.title}}</b> be it.</p>
+<p class="last_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">We are here to support your business and
+    it’s growth – from planning software that will move the needle, to developing that software and supporting you
+    through the entire rollout.</p>
+{% endcapture %}
+
 {% include about-us.html
 
-short_description="With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
-first_card="View Our Services"
-button_url="/service.html"
+description="Microsoft Dynamic CRM Consulting & Custom Development"
+main_content=about_us_main_content
 
 %}
 <!--/ About  -->
 
 
-
-<!-- portfolio_image_area  -->
-<div class="portfolio_image_area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="section_title text-center mb-90">
-                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">Featured Works</h3>
-                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Tour function information without cross action media value quickly maximize timely deliverables.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-md-12">
-                <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                    <div class="portfolio_thumb">
-                        <img src="assets/img/portfolio/1.png" alt="">
-                    </div>
-                    <div class="portfolio_hover">
-                        <div class="title">
-                            <span>App Design</span>
-                                <h3>Colorlib Mobile App</h3>
-                                <a class="boxed-btn3" href="portfolio_details.html">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                    <div class="portfolio_thumb">
-                        <img src="assets/img/portfolio/2.png" alt="">
-                    </div>
-                    <div class="portfolio_hover">
-                        <div class="title">
-                            <span>App Design</span>
-                                <h3>Colorlib Mobile App</h3>
-                                <a class="boxed-btn3" href="portfolio_details.html">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-lg-4">
-                <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                    <div class="portfolio_thumb">
-                        <img src="assets/img/portfolio/3.png" alt="">
-                    </div>
-                    <div class="portfolio_hover">
-                        <div class="title">
-                            <span>App Design</span>
-                                <h3>Colorlib Mobile App</h3>
-                                <a class="boxed-btn3" href="portfolio_details.html">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-lg-4">
-                <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                    <div class="portfolio_thumb">
-                        <img src="assets/img/portfolio/4.png" alt="">
-                    </div>
-                    <div class="portfolio_hover">
-                        <div class="title">
-                            <span>App Design</span>
-                                <h3>Colorlib Mobile App</h3>
-                                <a class="boxed-btn3" href="portfolio_details.html">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-lg-4">
-                <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-                    <div class="portfolio_thumb">
-                        <img src="assets/img/portfolio/5.png" alt="">
-                    </div>
-                    <div class="portfolio_hover">
-                        <div class="title">
-                            <span>App Design</span>
-                                <h3>Colorlib Mobile App</h3>
-                                <a class="boxed-btn3" href="portfolio_details.html">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--/ portfolio_image_area  -->
+<!-- Our Latest Blogs  -->
+{% include our-latest-blogs.html %}
+<!-- Our Latest Blogs  -->
 
 
 <!-- testimonial_area  -->
@@ -139,55 +63,55 @@ button_url="/service.html"
             <div class="col-xl-12">
                 <div class="testmonial_active owl-carousel">
                     <div class="single_carousel">
-                            <div class="single_testmonial text-center">
-                                    <div class="quote">
-                                        <img src="assets/img/testmonial/quote.svg" alt="">
-                                    </div>
-                                    <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                            Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                    <div class="testmonial_author">
-                                        <div class="thumb">
-                                                <img src="assets/img/testmonial/thumb.png" alt="">
-                                        </div>
-                                        <h3>Robert Thomson</h3>
-                                        <span>Business Owner</span>
-                                    </div>
+                        <div class="single_testmonial text-center">
+                            <div class="quote">
+                                <img src="assets/img/testmonial/quote.svg" alt="">
+                            </div>
+                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
+                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
+                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                            <div class="testmonial_author">
+                                <div class="thumb">
+                                    <img src="assets/img/testmonial/thumb.png" alt="">
                                 </div>
+                                <h3>Robert Thomson</h3>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="single_carousel">
-                            <div class="single_testmonial text-center">
-                                    <div class="quote">
-                                        <img src="assets/img/testmonial/quote.svg" alt="">
-                                    </div>
-                                    <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                            Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                    <div class="testmonial_author">
-                                        <div class="thumb">
-                                                <img src="assets/img/testmonial/thumb.png" alt="">
-                                        </div>
-                                        <h3>Robert Thomson</h3>
-                                        <span>Business Owner</span>
-                                    </div>
+                        <div class="single_testmonial text-center">
+                            <div class="quote">
+                                <img src="assets/img/testmonial/quote.svg" alt="">
+                            </div>
+                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
+                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
+                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                            <div class="testmonial_author">
+                                <div class="thumb">
+                                    <img src="assets/img/testmonial/thumb.png" alt="">
                                 </div>
+                                <h3>Robert Thomson</h3>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="single_carousel">
-                            <div class="single_testmonial text-center">
-                                    <div class="quote">
-                                        <img src="assets/img/testmonial/quote.svg" alt="">
-                                    </div>
-                                    <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                            sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                            Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                    <div class="testmonial_author">
-                                        <div class="thumb">
-                                                <img src="assets/img/testmonial/thumb.png" alt="">
-                                        </div>
-                                        <h3>Robert Thomson</h3>
-                                        <span>Business Owner</span>
-                                    </div>
+                        <div class="single_testmonial text-center">
+                            <div class="quote">
+                                <img src="assets/img/testmonial/quote.svg" alt="">
+                            </div>
+                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
+                                sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque. <br>
+                                Fusce ac mattis nulla. Morbi eget ornare dui. </p>
+                            <div class="testmonial_author">
+                                <div class="thumb">
+                                    <img src="assets/img/testmonial/thumb.png" alt="">
                                 </div>
+                                <h3>Robert Thomson</h3>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
