@@ -1,72 +1,78 @@
 ---
 layout: default
+root: true
+
+banner:
+    title: Dynamics CRM Consulting Company
+    description: Leverage our Microsoft Dynamics CRM development services to benefit from digital transformation and meet new-age customer demands.
+    button_label: View Our Services
+    button_url: /service.html
+    background_image: /assets/images/illustration.png
+
+services:
+    title: Services
+    description: "With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
+    cards:
+        -   name: Dynamics CRM Licensing
+            description: Helping you choose and procure the right Dynamics CRM/365 licenses
+            icon: icon-autorenew
+
+        -   name: Dynamics CRM Consulting
+            description: Discuss with the stakeholders at your business to study, analyze and identify your problems, gather requirements and define how to address your needs using Dynamics CRM
+            icon: icon-store_mall_directory
+
+        -   name: Implementation
+            description: Initial setup, configuration & administration to get your CRM system up and running in quick time. Perform data migration, customizations, integrations as needed to address complex needs.
+            icon: icon-shopping_basket
+
+        -   name: Integration
+            description: Integrating CRM with enterprise applications like ERP, SharePoint, Salesforce and other applications (on-premises/online)
+            icon: icon-power
+
+        -   name: Development & Customization
+            description: Customizations, workflow & Add-on development on Dynamics CRM to suit your business needs
+            icon: icon-sentiment_satisfied
+
+about_us:
+    description: Microsoft Dynamic CRM Consulting & Custom Development
+    main_content: |
+            <p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><b>Trillios Q</b> is a seasoned
+                Microsoft Dynamic CRM consulting and custom development company. If you’re looking for a trusted advisor to help you
+                get more out of your team and your company, let <b>Trillios Q</b> be it.</p>
+            <p class="last_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">We are here to support your business and
+                it’s growth – from planning software that will move the needle, to developing that software and supporting you
+                through the entire rollout.</p>
+
+testimonials:
+    -   description: With Trillios q, better pipeline visibility and team efficiencies have<br> helped double our business within six months.
+        client: VIVEK VISWANATHAN
+        client_role: CEO, SND SOLUTIONS
+    -   description: Some other testimonial.
+        client: SOME PERSON
+        client_role: CIO, XYZ SOLUTIONS
 ---
 
+
 <!-- Banner  -->
-{% include banner.html
-title="Dynamics CRM Consulting Company"
-button_label="View Our Services"
-button_url="/service.html"
-%}
+{% include banner.html data=page.banner %}
 <!--/ Banner  -->
 
 
 <!-- Services  -->
-{% include services.html
-description="With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
-first_card_image="assets/img/svg_icon/1.svg"
-first_card_title="Implementation"
-first_card_description="Setup, Configuration, Customization and Training for new and existing Microsoft Dynamics CRM instances."
-
-second_card_image="assets/img/svg_icon/2.svg"
-second_card_title="Integration"
-second_card_description="Integrate Dynamics CRM with ERP, Accounting, Databases, Cloud Apps, legacy and on-premise systems using api or tools."
-
-third_card_image="assets/img/svg_icon/3.svg"
-third_card_title="Development"
-third_card_description="Custom development services including Visualforce, Apex, Lightning Components, Web Apps, Services and Mobile Apps."
-%}
+{% include services-section.html data=page.services %}
 <!--/ Services  -->
 
 
 <!-- About  -->
-{% capture about_us_main_content %}
-<p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><b>{{site.title}}</b> is a seasoned
-    Microsoft Dynamic CRM consulting and custom development company. If you’re looking for a trusted advisor to help you
-    get more out of your team and your company, let <b>{{site.title}}</b> be it.</p>
-<p class="last_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">We are here to support your business and
-    it’s growth – from planning software that will move the needle, to developing that software and supporting you
-    through the entire rollout.</p>
-{% endcapture %}
-
-{% include about-us.html
-description="Microsoft Dynamic CRM Consulting & Custom Development"
-main_content=about_us_main_content
-%}
+{% include about-us-section.html data=page.about_us %}
 <!--/ About  -->
 
+<!-- Blog section  -->
+{% include blog-posts-section.html %}
+<!-- Blog section  -->
 
-{% include our-latest-blogs.html %}
+<!-- Testimonials  -->
+{% include testimonial-section.html testimonials=page.testimonials %}
+<!-- /Testimonials  -->
 
-
-<!-- testimonial_area  -->
-{% capture testimonials %}
-{% include testimonial.html
-    description="With trillios q, better pipeline visibility and team efficiencies have<br> helped double our business within six months."
-    author="VIVEK VISWANATHAN"
-    author_role="CEO, SND SOLUTIONS"
-%}
-{% include testimonial.html
-description="Some other testimonial."
-author="SOME PERSON"
-author_role="CEO, XYZ SOLUTIONS"
-%}
-{% endcapture %}
-
-
-{% include testimonial-area.html testimonials=testimonials %}
-<!-- /testimonial_area  -->
-
-{% include get-in-touch.html %}
-
-    
+{% include contact-us-section.html %}

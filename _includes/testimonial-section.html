@@ -1,0 +1,40 @@
+<div class="single_carousel">
+    <div class="single_testmonial text-center">
+        <div class="quote">
+            <img src="/assets2/img/testmonial/quote.svg" alt="">
+        </div>
+        <p>{{ include.description }} </p>
+        <div class="testmonial_author">
+            <h3>{{ include.author }}</h3>
+            <span>{{ include.author_role }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="site-section testimonial-wrap bg-light" id="testimonials-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title mb-3">Testimonials</h2>
+            </div>
+        </div>
+    </div>
+    <div class="slide-one-item home-slider owl-carousel">
+        {% for testimonial in include.testimonials %}
+        <div>
+            <div class="testimonial">
+                <figure class="mb-4 d-block align-items-center justify-content-center">
+                    <div><img src="/assets/images/person_4.jpg" alt="Image" class="w-100 img-fluid mb-3 shadow"></div>
+                </figure>
+                <blockquote class="mb-3">
+                    <p>&ldquo;{{ testimonial.description }}&rdquo;</p>
+                </blockquote>
+                <p class="text-black"><strong>{{ testimonial.client }}</strong></p>
+                <p class="text-black">{{ testimonial.client_role }}</p>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
