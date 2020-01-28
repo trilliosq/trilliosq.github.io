@@ -55,18 +55,20 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
-                $('#contactForm :input').attr('disabled', 'disabled');
+                var data = $(form).serialize();
+                var $inputs = $('#contactForm :input');
+                $inputs.attr('disabled', 'disabled');
                 $(form).ajaxSubmit({
                     type:"POST",
-                    data: $(form).serialize(),
+                    data: data,
                     url:"https://formsubmit.co/shivaji.mailbox@gmail.com",
                     success: function() {
                         $('#contactForm').fadeTo( "slow", 1, function() {
                             $('.alert-success').removeClass("d-none");
                             setTimeout(function(){
                                 $('.alert-success').fadeOut("slow");
-                                $('#contactForm :input').val('');
-                                $('#contactForm :input').removeAttr('disabled', '');
+                                $inputs.val('');
+                                $inputs.removeAttr('disabled', '');
                             }, 2000);
                         });
                     },
@@ -76,7 +78,7 @@ $(document).ready(function(){
                             $('.alert-danger').removeClass("d-none").show();
                             setTimeout(function(){
                                 $('.alert-danger').fadeOut("slow");
-                                $('#contactForm :input').removeAttr('disabled', '');
+                                $inputs.removeAttr('disabled', '');
                             }, 2000);
                         })
                     }
