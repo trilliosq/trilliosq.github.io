@@ -48,6 +48,14 @@ assets:
     - "*.png"
     - "_scss/styles.scss"
   digest: true
+  defaults:
+    js: { integrity: false } # true on JEKYLL_ENV=production
+    css: { integrity: false } # true on JEKYLL_ENV=production
+    img: { integrity: false } # true on JEKYLL_ENV=production
+  plugins:
+    css: { autoprefixer: {}}
+    img: { optim: {}}
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
