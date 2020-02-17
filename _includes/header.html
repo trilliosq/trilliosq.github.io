@@ -22,10 +22,8 @@
 
                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
                         <li><a href="{% if page.root != true %}/{% endif %}#home-section" class="nav-link">Home</a></li>
-                        <li><a href="/services.html" class="nav-link">Services</a></li>
-                        <li><a href="/about-us.html" class="nav-link">About Us</a></li>
-                        <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                        <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                        <li><a href="{% if page.root != true %}/{% endif %}#services-section" class="nav-link">Services</a></li>
+                        <li><a href="{% if page.root != true %}/{% endif %}#about-section" class="nav-link">About Us</a></li>
                         <li><a href="/contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>

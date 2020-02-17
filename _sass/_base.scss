@@ -2033,3 +2033,19 @@ h1, h2, h3, h4, h5,
 .contact-info .media-body p {
   color: #8a8a8a;
 }
+
+.service-card .card-description {
+  display: none;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.service-card:hover .card-description{
+  display: block;
+}
+
+.card-description li {
+  text-align: left;
+  color: white;
+}

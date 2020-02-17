@@ -3,53 +3,55 @@ layout: default
 root: true
 
 banner:
-    title: Dynamics CRM Consulting Company
-    description: Leverage our Microsoft Dynamics CRM development services to benefit from digital transformation and meet new-age customer demands.
+    title: Microsoft Dynamics 365
+    description: Move beyond traditional CRM and ERP applications with Microsoft Dynamics 365 transform your business processes using intelligent and customer centric applications.
     button_label: View Our Services
-    button_url: /services.html
+    button_url: "#services-section"
     background_image: /assets/images/illustration.png
 
 services:
     title: Services
-    description: "With more than 5 years of experience we can deliver the best Microsoft Dynamic CRM solutions."
+    description: "When selecting the right tools and platforms for your unique business needs it’s equally important to choose the right partner who is committed to your success. TrilliosQ is a Business Applications   service provider specializing in Microsoft Dynamics products. We leverage Microsoft Dynamics to resolve your business challenges and help you to stay current with technology. Our services include:"
     cards:
-        -   name: Dynamics CRM Licensing
-            description: Helping you choose and procure the right Dynamics CRM/365 licenses
+        -   name: Microsoft CRM Solutions
+            description: |
+                    <ul><li>Dynamics 365 Sales</li>
+                    <li>Dynamics 365 Customer Service</li>
+                    <li>Dynamics 365 Marketing</li>
+                    <li>Dynamics 365 Field Service</li>
+                    <li>Dynamics 365 Project Service Automation (PSA)</li>
+                    <li>Dynamics 365 Connected Field Service</li>
+                    <li>Dynamics 365 Artificial Intelligence (AI)</li></ul>
             image: /assets/images/services/communications.svg
 
-        -   name: Dynamics CRM Consulting
-            description: Discuss with the stakeholders at your business to study, analyze and identify your problems, gather requirements and define how to address your needs using Dynamics CRM
-            image: /assets/images/services/ideas.svg
-
-        -   name: Implementation
-            description: Initial setup, configuration & administration to get your CRM system up and running in quick time. Perform data migration, customizations, integrations as needed to address complex needs.
-            image: /assets/images/services/repair.svg
-
-        -   name: Integration
-            description: Integrating CRM with enterprise applications like ERP, SharePoint, Salesforce and other applications (on-premises/online)
-            image: /assets/images/services/cogwheels.svg
-
-        -   name: Development & Customization
-            description: Customizations, workflow & Add-on development on Dynamics CRM to suit your business needs
+        -   name: Microsoft Power Platform
+            description: |
+                <ul><li>Power Apps</li>
+                <li>Power Apps Portals</li>
+                <li>Power BI</li>
+                <li>Power Automate</li>
+                <li>Power Virtual Agents</li></ul>
             image: /assets/images/services/laptop.svg
 
-about_us:
-    description: Microsoft Dynamic CRM Consulting & Custom Development
-    main_content: |
-            <p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"><b>Trillios Q</b> is a seasoned
-                Microsoft Dynamic CRM consulting and custom development company. If you’re looking for a trusted advisor to help you
-                get more out of your team and your company, let <b>Trillios Q</b> be it.</p>
-            <p class="last_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">We are here to support your business and
-                it’s growth – from planning software that will move the needle, to developing that software and supporting you
-                through the entire rollout.</p>
+        -   name: "Services & Support"
+            description: |
+                <ul><li>Consulting</li>
+                <li>End-to-End Implementation</li>
+                <li>Integrations with other applications</li>
+                <li>Training</li>
+                <li>24*7 Support </li></ul>
+            image: /assets/images/services/repair.svg
 
-testimonials:
-    -   description: With Trillios q, better pipeline visibility and team efficiencies have<br> helped double our business within six months.
-        client: VIVEK VISWANATHAN
-        client_role: CEO, SND SOLUTIONS
-    -   description: Some other testimonial.
-        client: SOME PERSON
-        client_role: CIO, XYZ SOLUTIONS
+about_us:
+    main_content: |
+            <p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">If you’re looking for a trusted advisor to help you get more out of your products and your data, let TrilliosQ be it. We specialize in Microsoft Dynamics implementations and consulting services. With years of experience in implementing business applications, we understand what you need.  & partner with you to implement systems that address your unique requirements. We strive to enable our partners to simplify technology, acquire deeper insights and realize business value faster.</p>
+
+
+contact_us:
+    bottom_note: |
+        Stay ahead of competition by partnering with <b>TrilliosQ</b>, a company that is committed to your success.<br/>
+        To find out how <b>TrilliosQ</b> can help your business technology platforms with Microsoft’s suite of Business Applications
+
 ---
 
 
@@ -57,22 +59,12 @@ testimonials:
 {% include banner.html data=page.banner %}
 <!--/ Banner  -->
 
+<!-- About  -->
+{% include about-us-section.html data=page.about_us %}
+<!--/ About  -->
 
 <!-- Services  -->
 {% include services-section.html data=page.services %}
 <!--/ Services  -->
 
-
-<!-- About  -->
-{% include about-us-section.html data=page.about_us %}
-<!--/ About  -->
-
-<!-- Blog section  -->
-{% include blog-posts-section.html %}
-<!-- Blog section  -->
-
-<!-- Testimonials  -->
-{% include testimonial-section.html testimonials=page.testimonials %}
-<!-- /Testimonials  -->
-
-{% include contact-us-section.html %}
+{% include contact-us-section.html data=page.contact_us %}
