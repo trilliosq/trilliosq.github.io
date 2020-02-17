@@ -2034,18 +2034,18 @@ h1, h2, h3, h4, h5,
   color: #8a8a8a;
 }
 
-.service-card .card-description {
+.unit-4 .card-description {
   display: none;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
 
-.service-card:hover .card-description{
+.unit-4:hover .card-description{
   display: block;
+  color: white;
 }
 
 .card-description li {
   text-align: left;
-  color: white;
 }
