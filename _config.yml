@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Trillios Q
-email: contact@trilliosq.com
+email: info@trilliosq.com
 description: Dynamics CRM Consulting Company.
 tagline: Dynamics CRM Consulting Company
 baseurl: "" # the subpath of your site, e.g. /blog
