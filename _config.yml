@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Trillios Q
+title: TrilliosQ
 email: info@trilliosq.com
 description: Dynamics CRM Consulting Company.
 tagline: Dynamics CRM Consulting Company
